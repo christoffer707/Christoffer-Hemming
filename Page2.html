@@ -1,68 +1,170 @@
 <!DOCTYPE html>
-<html>
-   <head>
-   <link href="style.css" text="text/css" rel="stylesheet">
-       <title>Commercial Page</title>
-	   <style>
-		#name{color:white; 
-		width:500px; 
-		font-size:30px; 
-		font-family:lucida console; 
-		font-weight:bold; 
-		text-align:center; 
-		background-color:black; 
-		margin:auto;
-		}
-		#nurple hr{
-		width:100%;
-		margin-top:280px;
-		display:block;
-		background-color:black;
-		height:3px;
-		border-color:white;
-		}
-		#nurple{
-		width:80%; 
-		margin:auto;
+<head>
+	<title>Shopping Cart</title>
+</head>
+<link href="style.css" text="text/css" rel="stylesheet">
+<script src="java.js"></script>
+<body id="body" onload="alert('Welcome To Seahawks Gear!')"><font color= "#00ff00">
+	<h1 id="main">Seahawks Gear</h1>
+	<a id="mainPage" href="../index.html">Main Page</a>
+	<h2 id="gear">Appearal</h2>
+	<div class="addItem" id="women">
+		<h3 id="womenHead">Women's Jersey   $79.99</h3>
+		<img id="imgWomen" src="WomensJersey.jpg"></img>
+		<input id="womenButton" type="button" value="Pick Me!" onclick="addItem('Women Jersey', 79.99);" />
+	</div>
+	<div class="addItem" id="away">
+		<h3 id="awayHead">Men's Away Jersey   $89.99</h3>
+		<img src="MensAway.jpg"/>
+		<input id="awayButton" type="button" value="Pick Me!" onclick="addItem('Away Jersey', 89.99);" />
+	</div>
+	<div class="addItem" id="home">
+		<h3 id="homeHead">Men's Home   $89.99</h3>
+		<img src="MensHome.jpg"/>
+		<input id="homeButton" type="button" value="Pick Me!" onclick="addItem('Home Jersey', 89.99);" />
+	</div>
+	<div class="addItem" id="hands">
+		<h3 id="handsHead">Seahawks Hands   $45.99</h3>
+		<img src="SeahawksHands.jpg"/>
+		<input id="handsButton" type="button" value="Pick Me!" onclick="addItem('Seahawk Hands', 45.99);" />
+	</div>
+	<div class="additem" id="colorRush">
+		<h3 id="colorHead">Color Rush Jersey   $103.99</h3>
+		<img id="colorPic" src="ColorRush.jpg"/>
+		<form>
+		<input id="colorButton" type="button" value="Pick Me!" onclick="addItem('Color Rush Jersey', 103.99);" />
+		</form>
+	</div>
+	</font>
+	<div id="modal">
+		<button id="myBtn" onclick="modalButton()">Shopping Cart</button>
+
+		<div id="myModal" class="modal">
+
+		<div class="modal-content">
+    <span class="close" onclick="closeModal()">x</span>
+    
+	<div>
+	<button id="myCheckBtn" onclick="modalCheck()"></button>
+
+	<div id="myCheck" class="check">
+
+	<div class="check-content">
+    <span class="closeCheck" onclick="closeCheck()"></span>
+	<form id="checkOut">
+		<table>
+			<ul class="tab">
+	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'orderReview')">Order Review</a></li>
+	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'personalInfo')">Personal Info</a></li>
+	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'payment')">Payment</a></li>
+	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'review')">Review</a></li>
+	</ul>
+	</table>
+	</div>
+	<div id="orderReview" class="tabcontent">
+		<h3>Order Review</h3>
+		<table id="table">
+			<tr><td>Name</td><td>Quantity</td><td>Price</td><td id="remove">Remove</td><td id="total">Total</td></tr>
+		</table>
+	</div>	
+<div id="personalInfo" class="tabcontent">
+  <h3>Personal Info</h3>
+
+	<form id="form1" action="" onreset="myReset()" onsubmit="mySubmit()">
+		<table>
+		<input id="reset" type="reset">
+		<input id="submit" type="submit">
 		
-		}
-		body{
-		background:url(SkateBoard.jpg) no-repeat;
-		background-size:80%; 
-		background-position:center top;
-		}
-		
-	   </style>
-   </head>
-   <body>
-	<div id="nurple">
-      <h1 id="name">
-		Chris's World
-	  </h1>
-	  <ul>
-	  <a style="text-decoration:none;" href="../index.html"><li>Home Page</li></a><br />
-	  <a style="text-decoration:none;" href="index.html"><li>Commercial Page</li></a>
-	  <a style="text-decoration:none;" href="Rationale.html"><li>Rationale Page</li></a>
-	  </ul>
-	  <hr>
-	<form id="grabbag">
-	<h1 class="Types">Types of Skateboards</h1>
-	<select name="skateboards" id="select">
-	<option value="board1">Alien Workshop</option>
-	<option value="board2">Independent</option>
-	<option value="board3">Super Long Board</option>
-	</select>
+			<tr>
+				<td>
+					<p>First and Last Name: </p><input type="text" size="20" id="nameInput" onblur="myBlur()"
+					onkeyup="Check1(this.value, 
+					document.getElementById('error'))">
+					</input>
+					
+				</td>
+				<td><span id="error" style='color:red'>Invalid Name</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Address: </p><input size="20" type="text" id="addressInput" 
+					onkeyup="check2(this.value, document.getElementById('error1'))">
+					</input>
+					
+				</td>
+				<td>
+					<span id="error1" style='color:red'>Invalid Address</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Phone: </p><input size="11" type="text" id="phoneInput" 
+					onkeyup="check6(this.value, document.getElementById('error2'))"/>
+					
+					
+				</td>
+				<td>
+					<span id="error2" style='color:red'>Invalid Phone</span>
+				</td>
+			</tr>
+		</table>
 	</form>
-	<h2 id="ProductHeader">Product Quality</h2>
-	<p id="Product">"We go out and find the best deals to bring you the highest quality skateboard parts around, at the best prices. 
-	All parts are sold seperately and assembled in front of you, to insure customer quality."</p>
-	  </div>
-	  <div id="Comment">
-	  <h1 class="Cname">
-	  Comment Box
-	  </h1>
-	 <form><textarea form="form_id" id="commentArea">Type Here</textarea>
-	  <button type="Submit" class="submitButton">Submit</button></form>
-	  </div>
-   </body>
-</html>
+</div>
+
+
+
+<div id="payment" class="tabcontent">
+  <h3>Payment</h3>
+  <form id="form2">
+  <div class="dropdown">
+	<button onclick="myFunction()" class="dropbtn">Card Type</button> 
+	<div id="myDropdown" class="dropdown-content">
+		<a href="#">Mastercard</a>
+		<a href="#">Visa</a>
+		<a href="#">Express</a>
+  </div>
+</div>
+  <div>
+	<table>
+		<tr>
+			<td>
+	
+				<p>Card Number: </p><input size="19" type="text" name="cc" onkeyup="check3(document.getElementById('form2').
+				elements.namedItem('cc').value, document.getElementById('error3'))"/>
+          </td>
+			<td><span id="error3" style='color:red'>Invalid credit card number</span></td>
+        </tr>
+			<td>
+				<p>Name on Card: </p><input size="20" type="text" id="cardName" 
+					onkeyup="check5(this.value, document.getElementById('error4'))"/>
+					
+			</td>
+			<td><span id="error4" style='color:red'>Invalid Card Name</span></td>
+		</tr>
+		<tr>
+			<td>
+				<p>Expiration: </p><input size="9" type="text" name="date" onkeyup="check4(this.value)"/>
+			</td>
+			<td><span id="error5" style='color:red'>Invalid Expiration</span></td>
+		</tr>
+		</input>
+		</input>
+	</table>
+	</form>
+</div>
+</div>
+
+<div id="review" class="tabcontent">
+  <h3>Review</h3>
+  <p>Review Will Be Posted Here</p>	
+	</form>
+</div>
+	</div>
+	</div>	
+	</div>
+	</div>
+	</div>
+	</body>
+	</html>
+
