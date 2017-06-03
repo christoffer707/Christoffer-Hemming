@@ -19,11 +19,17 @@
 		display:block;
 		background-color:black;
 		height:3px;
-		border-color:black;
+		border-color:white;
 		}
 		#nurple{
 		width:80%; 
 		margin:auto;
+		
+		}
+		body{
+		background:url(SkateBoard.jpg) no-repeat;
+		background-size:80%; 
+		background-position:center top;
 		}
 		
 	   </style>
@@ -34,17 +40,29 @@
 		Chris's World
 	  </h1>
 	  <ul>
+	  <a style="text-decoration:none;" href="../index.html"><li>Home Page</li></a><br />
 	  <a style="text-decoration:none;" href="index.html"><li>Commercial Page</li></a>
+	  <a style="text-decoration:none;" href="Rationale.html"><li>Rationale Page</li></a>
 	  </ul>
 	  <hr>
 	<form id="grabbag">
 	<h1 class="Types">Types of Skateboards</h1>
-	<select name="skateboards">
+	<select name="skateboards" id="select">
 	<option value="board1">Alien Workshop</option>
 	<option value="board2">Independent</option>
 	<option value="board3">Super Long Board</option>
 	</select>
 	</form>
+	<h2 id="ProductHeader">Product Quality</h2>
+	<p id="Product">"We go out and find the best deals to bring you the highest quality skateboard parts around, at the best prices. 
+	All parts are sold seperately and assembled in front of you, to insure customer quality."</p>
+	  </div>
+	  <div id="Comment">
+	  <h1 class="Cname">
+	  Comment Box
+	  </h1>
+	 <form><textarea form="form_id" id="commentArea">Type Here</textarea>
+	  <button type="Submit" class="submitButton">Submit</button></form>
 	  </div>
    </body>
 </html>

@@ -40,6 +40,16 @@
 		width:80%; 
 		margin:auto;
 		}
+		#Comment{
+		position:fixed;
+		bottom:0px;
+		left:0px;
+		width:300px;
+		height:50px;
+		z-index:9999;
+		margin-left:200px;
+		margin-bottom:90px;
+		}
 		
 	   </style>
    </head>
@@ -49,7 +59,9 @@
 		Chris's World
 	  </h1>
 	  <ul>
+	  <a style="text-decoration:none;" href="../index.html"><li>Home Page</li></a><br />
 	  <a style="text-decoration:none;" href="Page2.html"><li>Page 2</li></a>
+	  <a style="text-decoration:none;" href="Rationale.html"><li>Rationale Page</li></a>
 	  </ul>
 	  <hr>
 	  <h2 id="Statement">Mission Statement</h2>
@@ -59,8 +71,31 @@
 		<p class="AboutP">We came out the streets of Tacoma to bring you the best products that Chris deems awesome. 
 		<br /><span class="second"> We specialize in skateboards, Seahawks gear, video games and all things electronic.</span></p>
 	  </div>
+	   <div id="Comment">
+		<h1 class="Cname">
+		Comment Box
+		</h1>
+			<form><textarea form="form_id" id="commentArea">Type Here</textarea>
+			<button type="Submit" class="submitButton">
+			Submit
+			</button></form>
 	  </div>
+	  <div class="Survey">
+		<h1>Quality Survey</h1>
+		<div class="box">
+			<a class="button" href="#popup1">Pop up</a>
+		</div>
+
+		<div id="popup1" class="overlay">
+		<div class="popup">
+		<h2>Help us make our site better!</h2>
+		<a class="close" href="#">×</a>
+		<div class="content">
+			Please leave a comment.
+		</div>
+		</div>
+		</div>
+	</div>
+	</div>
    </body>
 </html>
-
-
