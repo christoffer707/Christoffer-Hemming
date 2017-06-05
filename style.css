@@ -386,3 +386,11 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 	width: 10px;
 	height: 10px;
 }
+
+#acousticHead
+{
+	background-color: grey;
+	width: 300px;
+	text-align:center;
+	margin:auto;
+}
