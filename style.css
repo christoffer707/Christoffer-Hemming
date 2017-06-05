@@ -1,5 +1,5 @@
 body{
-	background:url(Skateboadwallpaper.jpg) no-repeat; 
+	background:url(Skateboadwallpaper.jpg) no-repeat fixed; 
 	background-size:100%; 
 	background-position:center top;	
 }
@@ -385,6 +385,7 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 {
 	width: 100px;
 	height: 100px;
+	
 }
 
 #acousticHead
