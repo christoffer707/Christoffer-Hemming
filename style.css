@@ -338,7 +338,7 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 #womenHead
 {
 	background-color: grey;
-	width: 100px;
+	width: 10px;
 	text-align:center;
 	margin:auto;
 }
@@ -374,3 +374,4 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 	text-align:center;
 	margin:auto;
 }
+
