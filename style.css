@@ -383,8 +383,11 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 
 #imgWomen
 {
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+    width: 60%;
+    padding: 10px;
 	
 }
 
