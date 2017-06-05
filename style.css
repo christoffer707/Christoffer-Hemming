@@ -1,5 +1,5 @@
 body{
-	background:url(Skateboadwallpaper.jpg) no-repeat fixed; 
+	background:url(Skateboadwallpaper.jpg) no-repeat; 
 	background-size:100%; 
 	background-position:center top;	
 }
@@ -338,7 +338,7 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 #womenHead
 {
 	background-color: grey;
-	width: 1px;
+	width: 300px;
 	text-align:center;
 	margin:auto;
 }
@@ -375,3 +375,14 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 	margin:auto;
 }
 
+#gear
+{
+	text-align: center;
+	font-size: 10px;
+}
+
+#imgWomen
+{
+	width: 10px;
+	height: 10px;
+}
