@@ -389,16 +389,6 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 	font-size: 10px;
 }
 
-#imgWomen
-{
-	width: 200px;
-	height: 200px;
-	margin: auto;
-    width: 60%;
-    padding: 10px;
-}
-
-
 #acousticHead
 {
 	background-color: grey;
