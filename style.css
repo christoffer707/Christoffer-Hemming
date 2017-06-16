@@ -79,6 +79,7 @@ a{
 #commentArea{
 	width:50%;
 	border:black 1px solid;
+	left: 10px;
 }
 .submitButton{
 	width:50%;
