@@ -11,6 +11,44 @@ body2{
 	height:100%;
 }
 
+#name{
+	color:white; 
+	width:500px; 
+	font-size:30px; 
+	font-family:lucida console; 
+	font-weight:bold; 		t
+	text-align:center; 
+	background-color:black; 
+	margin:auto;
+		}
+#nurple hr
+	{
+	width:100%;
+	margin-top:280px;
+	display:block;
+	background-color:black;
+	height:3px;
+	border-color:black;
+	}
+#Statement{
+	font-family:trebuchet ms;
+	text-decoration:underline;
+	color:white;
+	text-shadow:5px 2px black;
+	font-size:40px;
+	}
+#nurpleP{
+	font-family:futura;
+	text-indent:30px;
+	color:black;
+	font-size:30px;
+	font-weight:bold;
+	text-shadow:3px 3px white;
+	}
+#nurple{
+	width:80%; 
+	margin:auto;
+	}
 #text{
 	background:rgba(255,255,255,0.50);
 	box-shadow:2px 2px black;
