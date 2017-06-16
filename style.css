@@ -62,14 +62,14 @@ a{
 	color:red;
 }
 #Comment{
-	position:relative;
+	position:fixed;
 	bottom:0px;
 	left:50px;
 	width:300px;
 	height:50px;
 	z-index:9999;
 	margin-left:50px;
-	margin-bottom:100px;
+	margin-bottom:50px;
 }
 .Cname{
 	font-family:impact;
