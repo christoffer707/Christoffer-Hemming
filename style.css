@@ -114,6 +114,7 @@ body2{
 .AboutP{
 	font-size:20px;
 	font-family:Georgia;
+	font-weight: bold;
 }
 .Types{
 	font-family:impact;
@@ -167,6 +168,12 @@ a{
 #commentArea{
 	width:50%;
 	border:black 1px solid;
+}
+
+#invTab{
+	position: relative;
+	left: 0px;
+	
 }
 .submitButton{
 	width:50%;
