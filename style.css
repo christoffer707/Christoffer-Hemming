@@ -11,6 +11,56 @@ body2{
 	height:100%;
 }
 
+#nameInput
+{
+	font-size: 25px;
+}
+
+#addressInput
+{
+	font-size: 25px;
+}
+
+#phoneInput
+{
+	font-size: 25px;
+}
+
+#credit
+{
+	font-size: 25px;
+}
+
+#creditN
+{
+	font-size: 25px;
+}
+
+#expiration
+{
+	font-size: 25px;
+}
+ 
+#reviewInfo table, tr, td
+{
+	font-size: 40px;
+	text-align: center;
+	color: white;
+	width:60%;
+	margin:auto;
+	padding:20px;
+	border: 1px solid white;
+	background-color: #000066;
+	
+}
+
+#Action
+{
+	font-size: 55px;
+	color: white;
+	font-family: impact;
+}
+
 #name{
 	color:white; 
 	width:500px; 
