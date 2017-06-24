@@ -80,6 +80,7 @@ function totalCost()
 		total += cart.price[i] * cart.count[i];
 	}
 	td.innerHTML = "Total: $" + total.toFixed(2);
+	return total.toFixed(2);
 }
 
 function saveCart()
@@ -88,7 +89,7 @@ function saveCart()
 	localStorage.setItem("price", JSON.stringify(cart.price));
 	localStorage.setItem("count", JSON.stringify(cart.count));
 	var table = document.getElementById('table');
-	totalCost();
+	var cost = totalCost();
 	while(table.rows.length > 1)
 	{
 		table.deleteRow(1);
@@ -168,11 +169,6 @@ function openTab(evt, tabName)
     // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
-}
-
-function modalCheck()
-{
-	
 }
 
 function Check1(name, error) 
@@ -294,7 +290,19 @@ function myReset()
 
 function mySubmit() 
 {
-    alert("Submitted");
+    var str = JSON.stringify(cart);
+	document.getElementById("hidden1").value = str;
+	document.getElementById("hidden2").value = totalCost();
+	
+}
+
+function actionValue(n) 
+{
+	if(n == 1)
+		document.getElementById("action").value = "confirmOrder";
+	else
+		document.getElementById("action").value = "nfeuiq";
+	
 }
 
 function myBlur() 

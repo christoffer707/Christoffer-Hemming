@@ -44,129 +44,125 @@
 	</div>
 	</font>
 	<div id="modal">
-		<button id="myBtn" onclick="modalButton()">Shopping Cart</button>
+    <button id="myBtn" onclick="modalButton()">Shopping Cart</button>
 
-		<div id="myModal" class="modal">
+    <div id="myModal" class="modal">
 
-		<div class="modal-content">
-    <span class="close" onclick="closeModal()">x</span>
-    
-	<div>
-	<button id="myCheckBtn" onclick="modalCheck()"></button>
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">x</span>
 
-	<div id="myCheck" class="check">
+        <div>
 
-	<div class="check-content">
-    <span class="closeCheck" onclick="closeCheck()"></span>
-	<form id="checkOut">
-		<table>
-			<ul class="tab">
-	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'orderReview')">Order Review</a></li>
-	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'personalInfo')">Personal Info</a></li>
-	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'payment')">Payment</a></li>
-	<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'review')">Review</a></li>
-	</ul>
-	</table>
-	</div>
-	<div id="orderReview" class="tabcontent">
-		<h3>Order Review</h3>
-		<table id="table">
-			<tr><td>Name</td><td>Quantity</td><td>Price</td><td id="remove">Remove</td><td id="total">Total</td></tr>
-		</table>
-	</div>	
-<div id="personalInfo" class="tabcontent">
-  <h3>Personal Info</h3>
+          <div id="myCheck" class="check">
 
-	<form id="form1" action="" onreset="myReset()" onsubmit="mySubmit()">
-		<table>
-		<input id="reset" type="reset">
-		<input id="submit" type="submit">
-		
-			<tr>
-				<td>
-					<p>First and Last Name: </p><input type="text" size="20" id="nameInput" onblur="myBlur()"
-					onkeyup="Check1(this.value, 
+            <div class="check-content">
+              <span class="closeCheck" onclick="closeCheck()"></span>
+              
+                <table>
+				
+                  <ul class="tab">
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'orderReview')">Items In Cart</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'personalInfo')">Personal Info</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'payment')">Payment</a></li>
+                  </ul>
+                </table>
+            </div>
+            <div id="orderReview" class="tabcontent">
+              <h3>Items in Cart</h3>
+              <table id="table">
+                <tr>
+                  <td>Name</td>
+                  <td>Quantity</td>
+                  <td>Price</td>
+                  <td id="remove">Remove</td>
+                  <td id="total">Total</td>
+                </tr>
+              </table>
+            </div>
+			<form id="form1" action="review.php" method="post" onreset="myReset()" onsubmit="mySubmit()">
+            <div id="personalInfo" class="tabcontent">
+              <h3>Personal Info</h3>
+            <input type="hidden" id="hidden1" name="silent" value=""/>
+			<input type="hidden" id="hidden2" name="silent2" value=""/>
+                <table>
+                  <tr>
+                    <td>
+                      <p>First and Last Name: </p><input type="text" name="nm" size="20" id="nameInput" onblur="myBlur()" onkeyup="Check1(this.value, 
 					document.getElementById('error'))">
-					</input>
-					
-				</td>
-				<td><span id="error" style='color:red'>Invalid Name</span>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<p>Address: </p><input size="20" type="text" id="addressInput" 
-					onkeyup="check2(this.value, document.getElementById('error1'))">
-					</input>
-					
-				</td>
-				<td>
-					<span id="error1" style='color:red'>Invalid Address</span>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<p>Phone: </p><input size="11" type="text" id="phoneInput" 
-					onkeyup="check6(this.value, document.getElementById('error2'))"/>
-					
-					
-				</td>
-				<td>
-					<span id="error2" style='color:red'>Invalid Phone</span>
-				</td>
-			</tr>
-		</table>
-	</form>
+                      </input>
+
+                    </td>
+                    <td><span id="error" style='color:red'>Invalid Name</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Address: </p><input size="20" name="add" type="text" id="addressInput" onkeyup="check2(this.value, document.getElementById('error1'))"/>
+                      
+
+                    </td>
+                    <td>
+                      <span id="error1" style='color:red'>Invalid Address</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Phone: </p><input size="11" name="ph" type="text" id="phoneInput" onkeyup="check6(this.value, document.getElementById('error2'))" />
+
+
+                    </td>
+                    <td>
+                      <span id="error2" style='color:red'>Invalid Phone</span>
+                    </td>
+                  </tr>
+                </table>
+            
+            </div>
+
+
+
+            <div id="payment" class="tabcontent">
+              <h3>Payment</h3>
+                <div>
+                  <table>
+                    <tr>
+                      <td>
+
+                        <p>Card Number: </p><br><select name="cardType" id="cards">
+						<option value="Master Card">Master Card</option>
+						<option value="Visa">Visa</option>
+						<option value="Express">Express</option>
+						</select><input size="19" type="text" id="credit" name="cc" onkeyup="check3(document.getElementById('form1').
+						elements.namedItem('cc').value, document.getElementById('error3'))" />
+                      </td>
+                      <td><span id="error3" style='color:red'>Invalid credit card number</span></td>
+                    </tr>
+                    <td>
+                      <p>Name on Card: </p><input size="20" type="text" id="creditN" name="cn" id="cardName" onkeyup="check5(this.value, document.getElementById('error4'))" />
+
+                    </td>
+                    <td><span id="error4" style='color:red'>Invalid Card Name</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>Expiration: </p><input size="9" type="text" id="expiration" name="date" onkeyup="check4(this.value, document.getElementById('error5'))" />
+                      </td>
+                      <td><span id="error5" style='color:red'>Invalid Expiration</span></td>
+                    </tr>
+                    </input>
+                    </input>
+                  </table>
+				<input id="reset" type="reset">
+                <input id="submit" type="submit">
+              </div>
+            </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
+</body>
 
-
-
-<div id="payment" class="tabcontent">
-  <h3>Payment</h3>
-  <form id="form2">
-  <div class="dropdown">
-	<button onclick="myFunction()" class="dropbtn">Card Type</button> 
-	<div id="myDropdown" class="dropdown-content">
-		<a href="#">Mastercard</a>
-		<a href="#">Visa</a>
-		<a href="#">Express</a>
-  </div>
-</div>
-  <div>
-	<table>
-		<tr>
-			<td>
-	
-				<p>Card Number: </p><input size="19" type="text" name="cc" onkeyup="check3(document.getElementById('form2').
-				elements.namedItem('cc').value, document.getElementById('error3'))"/>
-          </td>
-			<td><span id="error3" style='color:red'>Invalid credit card number</span></td>
-        </tr>
-			<td>
-				<p>Name on Card: </p><input size="20" type="text" id="cardName" 
-					onkeyup="check5(this.value, document.getElementById('error4'))"/>
-					
-			</td>
-			<td><span id="error4" style='color:red'>Invalid Card Name</span></td>
-		</tr>
-		<tr>
-			<td>
-				<p>Expiration: </p><input size="9" type="text" name="date" onkeyup="check4(this.value)"/>
-			</td>
-			<td><span id="error5" style='color:red'>Invalid Expiration</span></td>
-		</tr>
-		</input>
-		</input>
-	</table>
-	</form>
-	</form>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>	
-	</div>
-	</div>
-	</body>
 </html>
-
