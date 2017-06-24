@@ -13,12 +13,7 @@ body2{
 	margin: auto;
 }
 
-#centerwrap { 
-     position: absolute;
-    top: 0px;
-    left: 50%;
-    margin-left: -500px; 
-}   
+
 
 #nameInput
 {
