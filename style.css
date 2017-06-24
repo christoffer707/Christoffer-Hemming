@@ -314,7 +314,7 @@ a{
 }
 
 #mainPage{
-	position: relative;
+	position: fixed;
 	left: 20px;
 	top: 40px;
 	color: red;
