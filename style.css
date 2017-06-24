@@ -180,8 +180,11 @@ a{
 }
 
 #invTab{
-	position: relative;
-	left: 30px;
+	position: absolute;
+	left: 20px;
+	top: 40px;
+	color: red;
+	font-size: 25px;
 }
 .submitButton{
 	width:50%;
