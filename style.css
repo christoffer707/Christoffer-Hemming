@@ -180,7 +180,7 @@ a{
 }
 
 #invTab{
-	position: absolute;
+	position: fixed;
 	left: 20px;
 	top: 40px;
 	color: red;
@@ -314,7 +314,7 @@ a{
 }
 
 #mainPage{
-	position: fixed;
+	position: absolute;
 	left: 20px;
 	top: 40px;
 	color: red;
