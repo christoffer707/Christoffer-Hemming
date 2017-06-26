@@ -191,7 +191,13 @@ a{
 	font-size:20px;
 	text-shadow:3px 3px grey;
 }
+
 #commentArea{
+	width:50%;
+	border:black 1px solid;
+}
+
+#commentAreas{
 	width:50%;
 	border:black 1px solid;
 }
