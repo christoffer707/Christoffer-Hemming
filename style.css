@@ -156,7 +156,7 @@ a{
 }
 
 #Comments{
-	position:fixed;
+	position:absolute;
 	bottom:0px;
 	left:0px;
 	width:300px;
@@ -203,7 +203,7 @@ a{
 }
 
 #invTab{
-	position: fixed;
+	position: absolute;
 	left: 20px;
 	top: 40px;
 	color: red;
@@ -234,7 +234,7 @@ a{
 .Survey{
 	right:0px;
 	bottom:0px;
-	position:fixed;
+	position:absolute;
 	width:800px;
 	margin-right:30px;
 }
