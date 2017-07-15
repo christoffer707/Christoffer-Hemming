@@ -472,6 +472,13 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 	right:30px;
 }
 
+#alert1
+{
+	position: fixed;
+	top: 60px;
+	right: 30;
+}
+
 #womenHead
 {
 	background-color: grey;

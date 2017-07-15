@@ -27,7 +27,7 @@
 	<div class="addItem" id="hands">
 		<h3 id="handsHead">Rad Electric Guitar   $45.99</h3>
 		<img src="sweetwater1.jpg" style="width:530px;height:750px;"/>
-		<input id="handsButton" type="button" value="Pick Me!" onclick="addItem('Rad Electric Guitar', 999.99);" />
+		<input id="handsButton" type="button" value="Pick Me!" onclick="myAlert();addItem('Rad Electric Guitar', 999.99);" />
 	</div>
 	<div class="addItem" id="colorRush">
 		<h3 id="colorHead">Fender Electric Guitar  $499.99</h3>
@@ -55,6 +55,7 @@
 	</font>
 	<div id="modal">
     <button id="myBtn" onclick="modalButton()">Shopping Cart</button>
+	<p id="alert1"></p>
 
     <div id="myModal" class="modal">
 
@@ -78,7 +79,7 @@
                 </table>
             </div>
             <div id="orderReview" class="tabcontent">
-              <h3>Items in Cart</h3>
+              <h3>Click Here to View Your Items</h3>
               <table id="table">
                 <tr>
                   <td>Name</td>
@@ -91,7 +92,7 @@
             </div>
 			<form id="form1" action="review.php" method="post" onreset="myReset()" onsubmit="mySubmit()">
             <div id="personalInfo" class="tabcontent">
-              <h3>Personal Info</h3>
+              <h3> Review Personal Info</h3>
             <input type="hidden" id="hidden1" name="silent" value=""/>
 			<input type="hidden" id="hidden2" name="silent2" value=""/>
                 <table>

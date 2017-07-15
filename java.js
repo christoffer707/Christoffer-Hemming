@@ -315,3 +315,14 @@ function myLoad()
 {
     alert("Page is loaded");
 }
+ function myAlert()
+ {
+	 var txt;
+    if (confirm("Your Items Been Added!") == true) {
+        txt = "You pressed OK!";
+    } else {
+        txt = "You pressed Cancel!";
+    }
+    document.getElementById("alert1").innerHTML = txt;
+}
+ }
