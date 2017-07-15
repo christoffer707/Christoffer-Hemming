@@ -234,7 +234,7 @@ a{
 .Survey{
 	right:0px;
 	bottom:5px;
-	position:absolute;
+	position:fixed;
 	margin-right:20px;
 }
 
