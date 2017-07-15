@@ -325,4 +325,10 @@ function myLoad()
     }
     document.getElementById("alert1").innerHTML = txt;
 }
+
+function combined(item, price)
+{
+	myAlert();
+	addItem(item, price);
+}
  }
