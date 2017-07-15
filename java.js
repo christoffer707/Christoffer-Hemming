@@ -331,4 +331,3 @@ function combined(item, price)
 	myAlert();
 	addItem(item, price);
 }
- }
