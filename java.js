@@ -319,9 +319,9 @@ function myLoad()
  {
 	 var txt;
     if (confirm("Your Items Been Added!") == true) {
-        txt = "You pressed OK!";
+        txt = "Item Confirmed!";
     } else {
-        txt = "You pressed Cancel!";
+        txt = "Item Cancelled!";
     }
     document.getElementById("alert1").innerHTML = txt;
 }
